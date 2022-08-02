@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  height: 64px;
+  width: 98vw;
+
+  margin: auto;
+
+  border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+}
+
+.header--elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 1200px;
+  max-width: 1200px;
+}
+
+.header--logo img {
+  height: 40px;
+  width: 100px;
+}
+
+.header--search {
+  width: 600px;
+
+  border: 2px solid grey;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  background: rgba(128, 128, 128, 0.171);
+}
+
+.header--buttons {
+  display: flex;
+
+  button {
+    height: 32px;
+    padding: 8px;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    color: white;
+    background: #007782;
+  }
+
+  button:last-child {
+    margin-left: 8px;
+  }
+}
+
+.--publish {
+  margin-left: 55px;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+
+  height: fit-content;
+  width: 98vw;
+
+  margin: auto;
+}
+
+.content {
+  height: auto;
+  width: 1200px;
+  max-width: 1200px;
+}
+
+.articles--filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.articles--section {
+  padding: 16px 0;
+}
+
+.articles--section h2 {
+  margin: 16px 0;
+}
+
+.articles {
+  display: flex;
+  justify-content: center;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.article--infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 400px;
+  width: 200px;
+
+  border: 1px solid slateblue;
+}
+
+.article--picture {
+  flex: 2;
+
+  height: 200px;
+  width: 192px;
+
+  overflow: hidden;
+}
+
+.article--picture img {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+@media (max-width: 1250px) {
+  .articles--filter {
+    flex-wrap: wrap;
+  }
+
+  .articles {
+    justify-content: center;
+  }
+}

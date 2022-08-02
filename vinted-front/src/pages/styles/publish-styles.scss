@@ -1,0 +1,19 @@
+.publish--form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .file--uploader {
+    border: solid #007782 2px;
+    color: #007782;
+  }
+}
+
+.uploaded--photos {
+  height: 150px;
+  width: 150px;
+}
