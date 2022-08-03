@@ -42,7 +42,7 @@ function App() {
           element={<Register handleToken={handleToken} />}
         />
         <Route path="/publish" element={<Publish userToken={userToken} />} />
-        <Route path="/buy/:price/:description" element={<Buy />} />
+        <Route path="/buy/:price/:name" element={<Buy />} />
       </Routes>
     </Router>
   );

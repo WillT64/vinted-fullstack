@@ -86,7 +86,7 @@ const Product = () => {
                       <button
                         onClick={() => {
                           navigate(
-                            `/buy/${elem.product_price}/:${elem.product_description}`
+                            `/buy/${elem.product_price}/${elem.product_name}`
                           );
                         }}
                       >

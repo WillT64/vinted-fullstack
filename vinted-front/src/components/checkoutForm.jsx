@@ -6,7 +6,7 @@ import axios from "axios";
 import "./styles/checkoutForm-styles.scss";
 
 const CheckoutForm = () => {
-  const { price, description } = useParams();
+  const { price, name } = useParams();
 
   const stripe = useStripe();
   const elements = useElements();
@@ -32,7 +32,7 @@ const CheckoutForm = () => {
         const response = await axios.post("http://localhost:4000/payment", {
           stripeToken,
           cost: price,
-          description,
+          description: name,
         });
 
         console.log("~ response.data", response.data);
@@ -52,14 +52,26 @@ const CheckoutForm = () => {
         <div className="purchase--completed">
           <h2>Bravo achat effectué avec succès !!</h2>
           <p>Vous allez le recevoir : hier</p>
-          <p>Adieu.</p>
+          <p>Adios.</p>
         </div>
       ) : (
-        <div className="checkout--form">
-          <form onSubmit={handleSubmit}>
-            <CardElement />
-            <input type="submit" value="Acheter" />
-          </form>
+        <div className="checkout--panel">
+          <div className="checkout--infos">
+            <div>
+              <p>Produit :</p>
+              <p>{name}</p>
+            </div>
+            <div>
+              <p>Prix</p>
+              <p>{price} €</p>
+            </div>
+          </div>
+          <div className="checkout--form">
+            <form onSubmit={handleSubmit}>
+              <CardElement />
+              <input type="submit" value="Acheter" />
+            </form>
+          </div>
         </div>
       )}
     </>
